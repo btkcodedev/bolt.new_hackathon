@@ -9,7 +9,7 @@ export interface SavedQuote {
   breakdown_data: CostBreakdown;
   insights_data: AIInsights;
   total_cost: number;
-  status: 'draft' | 'sent' | 'accepted' | 'rejected';
+  status?: 'draft' | 'sent' | 'accepted' | 'rejected';
 }
 
 // Mock data storage (in-memory for demo purposes)
