@@ -69,7 +69,7 @@ export function SavedQuotes({
 
     setSaving(true);
     try {
-      const { data, error } = await db.quotes.save({
+      const { error } = await db.quotes.save({
         name: currentJob.name || `Quote ${Date.now()}`,
         job_data: currentJob,
         breakdown_data: currentBreakdown,

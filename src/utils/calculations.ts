@@ -77,7 +77,6 @@ export function generateAIInsights(job: PrintJob): AIInsights {
   }
 
   // Generate alternative filament recommendations
-  const currentFilament = filamentTypes.find(f => f.name === job.filamentType);
   const alternativeFilaments = filamentTypes
     .filter(f => f.name !== job.filamentType)
     .map(f => {

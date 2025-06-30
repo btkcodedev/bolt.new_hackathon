@@ -84,7 +84,10 @@ const createDatabaseService = (): DatabaseService => {
         return mockDatabase.filament_presets.select();
       },
       async save(preset) {
-        return mockDatabase.filament_presets.insert(preset);
+        return mockDatabase.filament_presets.insert({
+          ...preset,
+          is_default: preset.is_default ?? false
+        });
       }
     }
   };
