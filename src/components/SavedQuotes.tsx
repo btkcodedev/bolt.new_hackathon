@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { 
   Save, 
   History, 
   Trash2, 
   Edit, 
-  Eye,
   Calendar,
-  DollarSign
 } from 'lucide-react';
 import { db, SavedQuote } from '@/lib/database';
 import { PrintJob, CostBreakdown, AIInsights } from '@/types';
@@ -199,7 +196,7 @@ export function SavedQuotes({
                       <span>{new Date(quote.created_at).toLocaleDateString()}</span>
                       <Badge 
                         variant="secondary" 
-                        className={getStatusColor(quote.status)}
+                        className={getStatusColor(quote.status ?? 'draft')}
                       >
                         {quote.status}
                       </Badge>

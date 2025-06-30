@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Calculator, Ruler, Clock, Zap, Wrench, Package, Truck, TrendingUp } from 'lucide-react';
+import { Calculator, Ruler, Clock, Zap, Package } from 'lucide-react';
 import { PrintJob } from '@/types';
 import { filamentTypes, printers } from '@/data/filaments';
 import { FileUpload } from './FileUpload';
