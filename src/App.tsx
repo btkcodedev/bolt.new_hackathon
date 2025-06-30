@@ -123,7 +123,7 @@ function App() {
                 {env.ENABLE_AI_INSIGHTS && (
                   <Badge variant="secondary" className="hidden md:inline-flex">
                     <Bot className="h-3 w-3 mr-1" />
-                    Created with bolt.new | Project submitted for World's largest hackathon | By btkcodedev
+                    Built with Bolt.new
                   </Badge>
                 )}
                 {env.ENABLE_DATABASE && (
